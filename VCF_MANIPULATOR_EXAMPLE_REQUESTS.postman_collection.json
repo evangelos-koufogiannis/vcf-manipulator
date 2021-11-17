@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "b60de1c7-9787-4a63-a839-fcb9cdc1119c",
+		"name": "VCF MANIPULATOR EXAMPLE REQUESTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET DATA",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get-paginated-data/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get-paginated-data",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "rs62028691",
+							"disabled": true
+						},
+						{
+							"key": "pagination-page",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "pagination-size",
+							"value": "45",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD DATA",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "zgZAht6gUV0AEi1Py6Mc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "CHROM",
+							"value": "chr1",
+							"type": "text"
+						},
+						{
+							"key": "POS",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "ALT",
+							"value": "A",
+							"type": "text"
+						},
+						{
+							"key": "REF",
+							"value": "G",
+							"type": "text"
+						},
+						{
+							"key": "ID",
+							"value": "rs123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/append-data/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"append-data",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE DATA",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "zgZAht6gUV0AEi1Py6Mc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ID",
+							"value": "rs123",
+							"type": "text"
+						},
+						{
+							"key": "POS",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/update-data/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update-data",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE DATA",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "zgZAht6gUV0AEi1Py6Mc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ID",
+							"value": "rs1263932941",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/delete-data/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"delete-data",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
